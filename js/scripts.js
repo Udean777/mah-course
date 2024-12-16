@@ -1,7 +1,18 @@
-/*!
-* Start Bootstrap - Landing Page v6.0.6 (https://startbootstrap.com/theme/landing-page)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-landing-page/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+const sections = [
+  { id: "navbar-section", file: "sections/navbar.html" },
+  { id: "header-section", file: "sections/header.html" },
+  { id: "features-section", file: "sections/features.html" },
+  { id: "showcase-section", file: "sections/showcase.html" },
+  { id: "course-package", file: "sections/course_package.html" },
+  { id: "testimonials-section", file: "sections/testimonials.html" },
+  { id: "cta-section", file: "sections/call_to_action.html" },
+  { id: "footer-section", file: "sections/footer.html" },
+];
+
+sections.forEach((section) => {
+  fetch(section.file)
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById(section.id).innerHTML = data;
+    });
+});

@@ -10917,3 +10917,20 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+.card-title {
+  font-weight: bold;
+  color: #007bff;
+}
+.card-price {
+  font-size: 1.5rem;
+  color: #28a745;
+  font-weight: bold;
+}
+.card-body {
+  padding: 2rem;
+}
+.card-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+}
